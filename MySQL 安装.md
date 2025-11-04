@@ -17,5 +17,37 @@ wget https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.7-linux-glibc2.28-x
 
 解压至指定目录
 ```
-tar -xvf mysql-8.4.7-linux-glibc2.28-x86_64.tar.xz -C /opt
+tar -xvf mysql-8.4.7-linux-glibc2.28-x86_64.tar.xz -C /opt/
 ```
+
+重命名目录名称
+mv mysql-8.4.6-linux-glibc2.28-x86_64/ mysql-8.4.6
+
+创建组、用户
+groupadd mysql
+useradd -r -g mysql -s /bin/false mysql
+
+创建数据目录，并授权、修改权限
+mkdir -p /opt/data
+chown mysql:mysql /opt/data
+chmod 750 /opt/data
+
+创建my.cnf并编辑
+vi /etc/my.cnf
+```
+[client]
+socket=/opt/data/mysql.sock
+
+[mysqld]
+basedir=/opt/mysql-8.4.6
+datadir=/opt/data
+```
+
+配置全局系统变量，并生效
+vi /etc/profile
+```
+export PATH=$PATH:/opt/mysql-8.4.6/bin
+
+source /etc/profile
+```
+
