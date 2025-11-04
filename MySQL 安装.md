@@ -10,9 +10,12 @@
 
 # 开始正文
 
-第一步：下载MySQL 软件包
+下载MySQL 软件包
 ```
 wget https://dev.mysql.com/get/Downloads/MySQL-8.4/mysql-8.4.7-linux-glibc2.28-x86_64.tar.xz
 ```
 
-第二步：解压
+解压至指定目录
+```
+tar -xvf mysql-8.4.7-linux-glibc2.28-x86_64.tar.xz -C /opt
+```
