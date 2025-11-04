@@ -57,3 +57,9 @@ export PATH=$PATH:/opt/mysql-8.4.6/bin
 source /etc/profile
 ```
 
+初始化MySQL
+```
+mysqld --initialize --user=mysql
+```
+
+### 若报错，可根据报错提示修复
