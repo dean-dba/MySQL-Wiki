@@ -92,3 +92,5 @@ service mysql start
 mysql -uroot -p
 alter user 'root'@'localhost' identified by 'mysql';
 ```
+
+##### 到此，MySQL单机版安装就介绍完成了，请开始你的表演吧！
