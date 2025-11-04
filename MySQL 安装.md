@@ -39,8 +39,8 @@ chmod 750 /opt/data
 ```
 
 创建my.cnf并编辑  
-vi /etc/my.cnf
 ```
+vi /etc/my.cnf
 [client]
 socket=/opt/data/mysql.sock
 
@@ -50,8 +50,8 @@ datadir=/opt/data
 ```
 
 配置全局系统变量，并生效  
-vi /etc/profile
 ```
+vi /etc/profile
 export PATH=$PATH:/opt/mysql-8.4.6/bin
 
 source /etc/profile
