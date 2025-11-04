@@ -81,6 +81,12 @@ chkconfig --add mysql
 chkconfig --list
 ```
 
+启动MySQL
+```
+service mysql status
+service mysql start
+```
+
 登录MySQL，修改root@localhost权限密码  
 ```
 mysql -uroot -p
