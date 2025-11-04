@@ -38,7 +38,7 @@ chown mysql:mysql /opt/data
 chmod 750 /opt/data
 ```
 
-创建my.cnf并编辑
+创建my.cnf并编辑  
 vi /etc/my.cnf
 ```
 [client]
