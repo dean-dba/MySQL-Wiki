@@ -34,6 +34,7 @@ analyze table t drop histogram on c1;
 
 直方图相关系统参数，默认值：20000000B（约等于20M） 
 - **参数影响直方图的sampling-rate**
+- **此参数是会话级参数**
 ```
 show variables like '%histogram_generation_max_mem_size%';
 ```
