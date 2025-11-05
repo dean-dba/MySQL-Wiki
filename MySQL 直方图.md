@@ -10,10 +10,11 @@
 -  **支持分区表，但不支持视图（view）**
 - **主要应用场景是针对没有索引的查询优化和有二级索引但数据分布不均匀导致执行计划不准确的场景**
 
-创建直方图
-```
+
+创建直方图  
 ##### 在不指定桶（Bucket）数量的情况下，默认会创建100个桶  
-##### 在不指定更新方式的情况下需要手动更新  
+##### 在不指定更新方式的情况下需要手动更新 
+``` 
 analyze table t update histogram on c1;
 ```
 
@@ -28,7 +29,7 @@ analyze table t drop histogram on c1;
 ```
 
 ### analyze table t 跟 update histogram on 的区别是什么  
-- ** analyze table针对的是表和索引，而update histogram on针对的是列，维度不同**
-- ** analyze table的结果是索引基数估算值，受持久化采样参数：innodb_stats_persistent_sample_pages，默认值：20页**
-- ** analyze table t与update histogram on自动更新自动触发时机：当表中10%行发生变化时，会触发自动更新**
-- ** analyze table t自动更新受参数：innodb_stats_persistent_sample_pages影响，触发自动更新**
+- **analyze table针对的是表和索引，而update histogram on针对的是列，维度不同**
+- **analyze table的结果是索引基数估算值，受持久化采样参数：innodb_stats_persistent_sample_pages，默认值：20页**
+- **analyze table t与update histogram on自动更新自动触发时机：当表中10%行发生变化时，会触发自动更新**
+- **analyze table t自动更新受参数：innodb_stats_persistent_sample_pages影响，触发自动更新**
