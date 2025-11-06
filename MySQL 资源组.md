@@ -45,6 +45,6 @@ select THREAD_ID,NAME,TYPE,PROCESSLIST_ID,PROCESSLIST_STATE,RESOURCE_GROUP from 
 - **对于使用systemd方式的操作系统，可以在mysqld.service文件中添加参数AmbientCapabilities=CAP_SYS_NICE启用它**
 - **对于不支持systemd方式的操作系统，可以此功能设置在mysqld文件上，命令：setcap cap_sys_nice+ep /path/to/mysqld**
 
-##### 不管使用那种方式开启CAP_SYS_NICE功能，都需要重启MySQL
+##### 特别注意：不管使用那种方式开启CAP_SYS_NICE功能，都需要重启MySQL
 
 ##### 至此，关于MySQL 8.0资源组功能就介绍完了，小伙伴们可以根据自己的业务需求开启它的奇妙之旅吧！
