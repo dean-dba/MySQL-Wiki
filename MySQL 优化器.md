@@ -14,7 +14,7 @@ SELECT @@optimizer_switch\G;
 @@optimizer_switch: index_merge=on,index_merge_union=on,index_merge_sort_union=on,index_merge_intersection=on,engine_condition_pushdown=on,index_condition_pushdown=on,mrr=on,mrr_cost_based=on,block_nested_loop=on,batched_key_access=off,materialization=on,semijoin=on,loosescan=on,firstmatch=on,duplicateweedout=on,subquery_materialization_cost_based=on,use_index_extensions=on,condition_fanout_filter=on,derived_merge=on,use_invisible_indexes=off,skip_scan=on,hash_join=on,subquery_to_derived=off,prefer_ordering_index=on,hypergraph_optimizer=off,derived_condition_pushdown=on,hash_set_operations=on
 ```
 
-优化器提示语法  
+优化器提示使用语法  
 ```
 /*+ opti_hint */
 ```
@@ -23,6 +23,9 @@ SELECT @@optimizer_switch\G;
 ```
 select /*+ JOIN_ORDER(t1, t2) t1.col_name,t2.col_name from t1,t2 where t1.id=t2.id; 
 ```
+
+**优化器成本模型：** 基于成本模型（CBO：Cost-based Optimizer）
+**优化器成本模型数据来源：** mysql.server_cost、mysql.engine_cost
 
 **优化器提示使用范围：** select、insert、update、delete、replace、explain  
 
