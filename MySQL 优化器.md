@@ -16,7 +16,13 @@ SELECT @@optimizer_switch\G;
 @@optimizer_switch: index_merge=on,index_merge_union=on,index_merge_sort_union=on,index_merge_intersection=on,engine_condition_pushdown=on,index_condition_pushdown=on,mrr=on,mrr_cost_based=on,block_nested_loop=on,batched_key_access=off,materialization=on,semijoin=on,loosescan=on,firstmatch=on,duplicateweedout=on,subquery_materialization_cost_based=on,use_index_extensions=on,condition_fanout_filter=on,derived_merge=on,use_invisible_indexes=off,skip_scan=on,hash_join=on,subquery_to_derived=off,prefer_ordering_index=on,hypergraph_optimizer=off,derived_condition_pushdown=on,hash_set_operations=on
 ```
 
+优化器提示语法  
+```
+/*+ opti_hint */
+```
+
+**优化器提示使用范围**：select、insert、update、delete、replace、explain
 
 #### 重要声明
 - **关于优化器可参考官网链接：https://dev.mysql.com/doc/refman/8.4/en/switchable-optimizations.html**
-- ****
+- **关于优化器提示可以参考官网链接：https://dev.mysql.com/doc/refman/8.4/en/optimizer-hints.html**
