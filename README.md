@@ -7,3 +7,5 @@
 ## 目录
 
 - **<a href="https://github.com/dean-dba/MYSQL--/blob/main/MySQL%20%E5%AE%89%E8%A3%85.md" target="_blank">MySQL 安装</a>**
+- **<a href="https://github.com/dean-dba/MYSQL--/blob/main/MySQL%20%E7%9B%B4%E6%96%B9%E5%9B%BE.md" target="_blank">MySQL 直方图</a>**
+- **<a href="https://github.com/dean-dba/MYSQL--/blob/main/MySQL%20%E8%B5%84%E6%BA%90%E7%BB%84.md" target="_blank">MySQL 资源组</a>**
