@@ -31,6 +31,7 @@ show warnings;
 ```
 
 **优化器成本模型：** 基于成本模型（CBO：Cost-based Optimizer）  
+
 **优化器成本模型数据来源：** mysql.server_cost、mysql.engine_cost
 
 **优化器提示使用范围：** select、insert、update、delete、replace、explain  
