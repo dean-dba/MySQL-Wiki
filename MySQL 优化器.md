@@ -37,3 +37,5 @@ select /*+ JOIN_ORDER(t1, t2) t1.col_name,t2.col_name from t1,t2 where t1.id=t2.
 - **关于优化器可参考官网链接：** https://dev.mysql.com/doc/refman/8.4/en/switchable-optimizations.html
 - **关于优化器提示可以参考官网链接：** https://dev.mysql.com/doc/refman/8.4/en/optimizer-hints.html
 - **关于优化器成本模型可以参考官网链接**：https://dev.mysql.com/doc/refman/8.4/en/cost-model.html
+
+**特别说明：如果用家庭自驾出游来形容优化器成本模型、优化器、优化器提示，可以这么描述：** 优化器成本模型就像是吃喝拉撒的评估手册、优化器就像是吃喝拉撒的最优建议、而优化器提示就像是吃喝拉撒的任意妄为  
