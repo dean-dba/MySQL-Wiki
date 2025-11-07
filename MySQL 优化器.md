@@ -18,4 +18,5 @@ SELECT @@optimizer_switch\G;
 
 
 #### 重要声明
-- **关于优化器可参考官网链接：**
+- **关于优化器可参考官网链接：https://dev.mysql.com/doc/refman/8.4/en/switchable-optimizations.html**
+- ****
