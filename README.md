@@ -10,3 +10,4 @@
 - **<a href="https://github.com/dean-dba/MYSQL--/blob/main/MySQL%20%E7%9B%B4%E6%96%B9%E5%9B%BE.md" target="_blank">MySQL 直方图</a>**
 - **<a href="https://github.com/dean-dba/MYSQL--/blob/main/MySQL%20%E8%B5%84%E6%BA%90%E7%BB%84.md" target="_blank">MySQL 资源组</a>**
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E4%BC%98%E5%8C%96%E5%99%A8.md" target="_blank">MySQL 优化器</a>**
+- **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E4%BC%98%E5%8C%96%E5%99%A8.md" target="_blank">MySQL Online DDL</a>**
