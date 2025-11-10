@@ -24,6 +24,9 @@ ALTER TABLE tbl_name ADD INDEX name (col_list),ALGORITHM=default,LOCK=default;
 - **修改varchar类型时，小于255B内，是inplace，否则是copy，因为小于255B列由1B编码，大于255B需要2B编码**
 - **instant、inplace操作期间产生的DML最大数据量受参数：innodb_online_alter_log_max_size控制，默认：128MB**
 - **多个同类型的alter table操作，最好合并成一个alter table操作，调用一次api**
+- **alter tabler操作期间的DML数据，在应用至新表时才会做约束检查**
+
+ #### 对于inplace、copy的Online DDL操作，可以使用开源工具gh-ost处理，针对gh-ost，我将单独写一篇文章介绍它的用法 
 
  #### MySQL 8.0版本开始并行创建索引功能，受参数：innodb_ddl_buffer_size(默认：1MB)、innodb_parallel_read_threads(最小4)、innodb_ddl_threads(默认：4) 控制
 
