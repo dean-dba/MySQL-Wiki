@@ -11,3 +11,4 @@
 - **<a href="https://github.com/dean-dba/MYSQL--/blob/main/MySQL%20%E8%B5%84%E6%BA%90%E7%BB%84.md" target="_blank">MySQL 资源组</a>**
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E4%BC%98%E5%8C%96%E5%99%A8.md" target="_blank">MySQL 优化器</a>**
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20Online%20DDL.md" target="_blank">MySQL Online DDL</a>**
+- **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E7%94%A8%E6%88%B7%E4%B8%8ESSL.md" target="_blank">MySQL 用户与SSL</a>**
