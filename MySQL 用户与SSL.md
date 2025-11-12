@@ -21,6 +21,11 @@ CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'password';
 GRANT SELECT ON app_db.* TO 'jeffrey'@'localhost';
 ```
 
+使用随机密码创建用户
+```
+CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY RANDOM PASSWORD;
+```
+
 查看用户及权限
 ##### 参数：“print_identified_with_as_hex”是将hash后的不可打印字符转化为十六进制字符串
 ```
