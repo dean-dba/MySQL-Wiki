@@ -35,6 +35,7 @@ explain返回内容，重点关注：type、key、rows、Extra，SQL执行顺序
 
 - **也支持通过语法"EXPLAIN FOR CONNECTION ID"语法，显示执行计划**
 - **通过"show warnings;"，可以查看重写后的SQL**
+- **通过show status like 'last_query_cost';，可以查看SQL的执行成本**
 
 
 ##### 假设一个二级索引页可以存放多少数据的计算规则如下
