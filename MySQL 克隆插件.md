@@ -31,7 +31,7 @@ INSTALL PLUGIN clone SONAME 'mysql_clone.so';
 CLONE LOCAL DATA DIRECTORY = '/mnt/mysql_data/data';
 ```
 
-远程克隆语法，##### 当设置为克隆至本地目录后，克隆完成以后，会自动重启MySQL实例  
+远程克隆语法，注意：当设置为克隆至本地目录后，克隆完成以后，会自动重启MySQL实例  
 ```
 GRANT all on *.* to 'root'@'%';
 SET GLOBAL clone_valid_donor_list = 'example.donor.host.com:3306';
@@ -77,7 +77,7 @@ SELECT * FROM performance_schema.clone_progress;
 - **设置参数"clone_block_ddl=on"，避免在克隆期间源实例有DDL阻塞，以及数据不一致**
 - **数据量特别大需调整"clone_max_concurrency"、"clone_max_data_bandwidth"、"clone_max_network_bandwidth"，避免对源实例造成负载压力**
 
-#### 克隆插件支持SSL、压缩数据的克隆
+#### 注意：克隆插件支持SSL、压缩数据的克隆
 
 #### 至此，关于克隆插件功能就已经全部讲完了，有需要的小伙伴，可以根据需要掌握起来吧！
 
