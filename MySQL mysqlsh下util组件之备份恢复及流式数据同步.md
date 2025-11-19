@@ -63,3 +63,11 @@ util.importTable("/opt/aaa.csv", {schema: "test", table: "aaa", dialect: "csv", 
 util.importJSON (path, options)
 util.importJson("/opt/aaa.json", {schema: "test",table: "aaa",convertBsonTypes: true,convertBsonOid: true,extractOidTime: "_id"})
 ```
+
+#### 在实际场景中，可以使用dump备份实例上的数据，替代mysqldump、Percona Xtrabackup，因为mysqldump是单线程，而Percona Xtrabackup第三方工具
+#### 在实际场景中，可以使用copy进行跨版本的数据迁移，也可以使用copy进行不同环境间的数据迁移，因为是流式复制，速度更快
+#### 在实际场景中，可以使用importJSON将mongodb中的数据导入至mysql
+
+#### 至此，关于util组件的备份恢复及流式数据同步就介绍完了，有需要的小伙伴，可以根据自己的需求用起来吧！
+
+#### 参数链接：https://dev.mysql.com/doc/mysql-shell/9.5/en/mysql-shell-utilities.html
