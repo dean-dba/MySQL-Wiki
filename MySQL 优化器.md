@@ -29,6 +29,27 @@ explian select format=json t1.col_name,t2.col_name from t1,t2 where t1.id=t2.id;
 show warnings; 
 ```
 
+启用Optimizer Trace，默认格式：json
+```
+SET SESSION optimizer_trace = "enabled=on";
+SELECT f1, f2 FROM t1 WHERE f2 > 40;
+SELECT * FROM information_schema.optimizer_trace\G;
+```
+
+Optimizer Trace相关参数
+```
+mysql> show variables like '%trace%';
++------------------------------+----------------------------------------------------------------------------+
+| Variable_name                | Value                                                                      |
++------------------------------+----------------------------------------------------------------------------+
+| optimizer_trace              | enabled=on,one_line=off                                                    |
+| optimizer_trace_features     | greedy_search=on,range_optimizer=on,dynamic_range=on,repeated_subselect=on |
+| optimizer_trace_limit        | 1                                                                          |
+| optimizer_trace_max_mem_size | 1048576                                                                    |
+| optimizer_trace_offset       | -1                                                                         |
++------------------------------+----------------------------------------------------------------------------+
+```
+
 **优化器成本模型：** 基于成本模型（CBO：Cost-based Optimizer）  
 
 **优化器成本模型数据来源：** mysql.server_cost、mysql.engine_cost
