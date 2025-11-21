@@ -48,3 +48,7 @@ select THREAD_ID,NAME,TYPE,PROCESSLIST_ID,PROCESSLIST_STATE,RESOURCE_GROUP from 
 ##### 特别注意：不管使用那种方式开启CAP_SYS_NICE功能，都需要重启MySQL
 
 ##### 至此，关于MySQL 8.0资源组功能就介绍完了，小伙伴们可以根据自己的业务需求开始使用它吧！
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
