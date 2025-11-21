@@ -31,7 +31,7 @@ util.loadDump("/opt/mysql", {dryRun: true,deferTableIndexes: "all",analyzeTables
 util.loadDump("/opt/mysql",{dryRun: true,deferTableIndexes: "all",analyzeTables: "on",threads:2,includeSchemas:"test"})
 util.loadDump("/opt/mysql",{dryRun: true,deferTableIndexes: "all",analyzeTables: "on",threads:2,includeTables: [ "`test`.`table_1`",  "`test`.`table_2`" ]})
 ```
-&nbsp;
+
 ##### 关于dump、load用法说明
 - **默认并发线程数：4**
 - **默认不限制速率**
@@ -41,7 +41,7 @@ util.loadDump("/opt/mysql",{dryRun: true,deferTableIndexes: "all",analyzeTables:
 - **默认忽略库：information_schema,mysql,performance_schema,sys**
 - **默认同步创建索引**
 - **默认不分析表**
-
+&nbsp;
 copy语法、示例，###### 语法上跟dump相似，最大不同是cop采用流式复制，没有中间文件，但不支持断点续传
 ```
 util.copyInstance(connectionData[, options])
