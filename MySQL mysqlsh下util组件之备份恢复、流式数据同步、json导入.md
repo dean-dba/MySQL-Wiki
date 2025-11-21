@@ -73,3 +73,7 @@ util.importJson("/opt/aaa.json", {schema: "test",table: "aaa",convertBsonTypes: 
 #### 至此，关于util组件的备份恢复及流式数据同步就介绍完了，有需要的小伙伴，可以根据自己的需求用起来吧！
 
 #### 参数链接：https://dev.mysql.com/doc/mysql-shell/9.5/en/mysql-shell-utilities.html
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
