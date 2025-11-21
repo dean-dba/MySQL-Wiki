@@ -68,3 +68,7 @@
 ##### 至此，关于MySQL 版本升级就介绍完了，有兴趣的小伙伴，赶紧看看你的数据库是不是要升级了！
 
 ##### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/upgrading.html
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
