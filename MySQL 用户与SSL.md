@@ -84,3 +84,7 @@ mysql> SHOW VARIABLES LIKE 'validate_password%';
 #### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/security.html
 
 #### 至此关于MySQL 用户与SSL的用法和功能就介绍完成了，小伙伴们根据需要用起来吧！
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
