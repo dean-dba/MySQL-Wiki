@@ -3,6 +3,7 @@
 ### MySQL 8.0推出了一个工具mysqlsh，它是一款多功能版的mysql客户端，支持SQL、JS、Python三种语言，主要应用于主从、MGR、日常操作、备份恢复、流式数据同步、升级版本检查、备份恢复binlog、性能诊断、导入json等场景，可以说它是mysql、mysqlbinlog、mysqldump、mysqlpump、mysql_upgrade、mysqlcheck等这几个客户端的融合版，本章节主要介绍在备份恢复、流式数据同步场景下的应用
 
 &nbsp;
+
 **util组件的备份恢复及流式数据同步与克隆插件的最大区别：** util组件的备份恢复及流式数据同步是逻辑备份恢复，底层基于"LOAD DATA LOCAL INFILE"，克隆插件是物理备份恢复  
 
 dump实例语法、示例
