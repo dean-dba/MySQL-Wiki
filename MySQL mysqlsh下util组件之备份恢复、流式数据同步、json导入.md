@@ -32,6 +32,7 @@ util.loadDump("/opt/mysql",{dryRun: true,deferTableIndexes: "all",analyzeTables:
 util.loadDump("/opt/mysql",{dryRun: true,deferTableIndexes: "all",analyzeTables: "on",threads:2,includeTables: [ "`test`.`table_1`",  "`test`.`table_2`" ]})
 ```
 
+&nbsp;
 ##### 关于dump、load用法说明
 - **默认并发线程数：4**
 - **默认不限制速率**
