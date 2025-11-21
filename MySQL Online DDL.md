@@ -25,10 +25,12 @@ ALTER TABLE tbl_name ADD INDEX name (col_list),ALGORITHM=default,LOCK=default;
 - **多个同类型的alter table操作，最好合并成一个alter table操作，调用一次api**
 - **alter tabler操作期间的DML数据，在应用至新表时才会做约束检查**
 
- #### 对于inplace、copy的Online DDL操作，可以使用开源工具gh-ost处理，针对gh-ost，我将单独写一篇文章介绍它的用法 
+#### 对于inplace、copy的Online DDL操作，可以使用开源工具gh-ost处理，针对gh-ost，我将单独写一篇文章介绍它的用法 
 
- #### MySQL 8.0版本开始并行创建索引功能，受参数：innodb_ddl_buffer_size(默认：1MB)、innodb_parallel_read_threads(最小4)、innodb_ddl_threads(默认：4) 控制，实际使用中发现，增加innodb_ddl_buffer_size参数值，可以明显加快并行创建索引的速度
+#### MySQL 8.0版本开始并行创建索引功能，受参数：innodb_ddl_buffer_size(默认：1MB)、innodb_parallel_read_threads(最小4)、innodb_ddl_threads(默认：4) 控制，实际使用中发现，增加innodb_ddl_buffer_size参数值，可以明显加快并行创建索引的速度
 
- #### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/innodb-online-ddl.html
+#### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/innodb-online-ddl.html
 
- 
+
+&nbsp;
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
