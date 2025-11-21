@@ -12,8 +12,7 @@
 - **shared：** 只允许DQL
 - **exclusive：** 不允许DML、DQL  
 
-Online DDL语法
-#### 当使用"ALGORITHM=default,LOCK=default"时，MySQL会根据Online DDL操作类型，存储引擎类型、MySQL版本自动匹配对应的ALGORITHM、LOCK，原则是最小化ALGORITHM、LOCK
+Online DDL语法，注意：当使用"ALGORITHM=default,LOCK=default"时，MySQL会根据Online DDL操作类型，存储引擎类型、MySQL版本自动匹配对应的ALGORITHM、LOCK，原则是最小化ALGORITHM、LOCK  
 ```
 ALTER TABLE tbl_name ADD INDEX name (col_list),ALGORITHM=default,LOCK=default;
 ```
