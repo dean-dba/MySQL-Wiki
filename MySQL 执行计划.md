@@ -49,3 +49,7 @@ innodb_page_size：16K，即16384B
 ```
 
 #### 这里不过多讲执行计划输出中各个字段具体都是什么含义，也不展开讲各个字段都有哪些类型，有需要的小伙伴们，可以参考链接：https://dev.mysql.com/doc/refman/8.4/en/execution-plan-information.html
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
