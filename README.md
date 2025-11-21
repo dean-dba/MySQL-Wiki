@@ -19,4 +19,4 @@
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7.md" target="_blank">MySQL 版本升级</a>**
 
 
-##### 本人联系方式：微信：+86 183 1026 3857   Telegram：+86 189 1127 2119 
+**本人联系方式：微信：+86 183 1026 3857   Telegram：+86 189 1127 2119** 
