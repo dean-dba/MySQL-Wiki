@@ -82,3 +82,7 @@ SELECT * FROM performance_schema.clone_progress;
 #### 至此，关于克隆插件功能就已经全部讲完了，有需要的小伙伴，可以根据需要掌握起来吧！
 
 #### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/clone-plugin.html
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
