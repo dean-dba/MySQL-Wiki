@@ -55,4 +55,10 @@
 2. 稳定后释放旧实例
 
 
+##### 查看系统参数变更明细：select * from performance_schema.variables_info;
 
+##### 本篇文章不是一个升级的具体命令操作手册，它更多的是一种指导性手册，告诉升级人员应该关注哪些方面，以及如何实施升级
+
+##### 至此，关于MySQL 版本升级就介绍完了，有兴趣的小伙伴，赶紧看看你的数据库是不是要升级了！
+
+##### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/upgrading.html
