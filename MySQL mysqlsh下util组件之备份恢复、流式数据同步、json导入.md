@@ -42,6 +42,7 @@ util.loadDump("/opt/mysql",{dryRun: true,deferTableIndexes: "all",analyzeTables:
 - **默认同步创建索引**
 - **默认不分析表**
 &nbsp;
+
 copy语法、示例，###### 语法上跟dump相似，最大不同是cop采用流式复制，没有中间文件，但不支持断点续传
 ```
 util.copyInstance(connectionData[, options])
