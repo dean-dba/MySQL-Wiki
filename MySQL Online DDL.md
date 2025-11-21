@@ -31,6 +31,6 @@ ALTER TABLE tbl_name ADD INDEX name (col_list),ALGORITHM=default,LOCK=default;
 
 #### 参数链接：https://dev.mysql.com/doc/refman/8.4/en/innodb-online-ddl.html
 
-
 &nbsp;
+
 **有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
