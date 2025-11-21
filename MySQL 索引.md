@@ -110,3 +110,7 @@ alter table test drop index idx_a;
 #### 至此，关于MySQL 索引就基本介绍完了，有需要的小伙伴们，赶紧跟着示例使用起来吧！
 
 #### 参考链接：https://dev.mysql.com/doc/refman/8.4/en/create-index.html
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
