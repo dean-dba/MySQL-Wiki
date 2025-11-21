@@ -18,4 +18,4 @@
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20mysqlsh%E4%B8%8Butil%E7%BB%84%E4%BB%B6%E4%B9%8B%E5%A4%87%E4%BB%BD%E6%81%A2%E5%A4%8D%E3%80%81%E6%B5%81%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E3%80%81json%E5%AF%BC%E5%85%A5.md" target="_blank">mysqlsh下util组件之备份恢复、流式数据同步、json导入</a>**
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7.md" target="_blank">MySQL 版本升级</a>**
 
-**有兴趣的小伙伴，可加联系方式：微信：+86 183 1026 3857 &nbsp &nbsp Telegram：+86 189 1127 2119** 
+**有兴趣的小伙伴，可加联系方式：微信：+86 183 1026 3857      Telegram：+86 189 1127 2119** 
