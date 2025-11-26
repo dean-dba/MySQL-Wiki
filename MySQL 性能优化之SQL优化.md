@@ -33,7 +33,7 @@
 - **批量比单行更高效**
 - **物理删除使用truncate table**
 
-#### 要善于使用索引解决SQL问题，它是最简单、最直接、最有效的一种解决方案，当索引无法解决问题，可以从更改SQL，修改业务逻辑等方面入手，关于索引，请参数链接：https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E7%B4%A2%E5%BC%95.md
+#### 要善于使用索引解决SQL问题，它是最简单、最直接、最有效的一种解决方案，当索引无法解决问题，可以从更改SQL，修改业务逻辑等方面入手，关于索引，请参数链接：<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E7%B4%A2%E5%BC%95.md" target="_blank">MySQL 索引</a>
 
 #### 本篇文章不是讲解SQL优化的操作手册，它更多的是一种指导手册，指导在创建表结构时，写SQL时应该注意什么
 
