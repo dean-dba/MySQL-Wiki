@@ -22,4 +22,20 @@
 - **in、not in、exists、not exists会自动转换成半连接、反连接，受参数"optimizer_switch=semijoin=on"控制**
 - **in、not in无法转换成半连接、反连接时，会自动转换成exists、not exists，并使用trigcond处理null值**
 - **FROM子句的子查询会自动转换为外部查询，避免使用临时表，受参数"optimizer_switch=derived_merge=on"控制**
-- **FROM子句的子查询无法转换为外部查询时，将外层的where条件下推到子查询中提前过滤数据，受参数"optimizer_switch=derived_condition_pushdown=on"控制**  
+- **FROM子句的子查询无法转换为外部查询时，将外层的where条件下推到子查询中提前过滤数据，受参数"optimizer_switch=derived_condition_pushdown=on"控制**
+- **mysql索引记录空值，并将多个null值视为同一个值，且null值索引位置在最前面，受参数“innodb_stats_method”控制(默认:nulls_equal)**
+
+  
+#### DML优化
+- **将多行合并至一行，合并大小受参数"bulk_insert_buffer_size"控制(默认:8M)**
+- **LOAD DATA比insert into快20倍**
+- **使用mysqlsh工具的util.importTable()、util.loadDump()**
+- **避免长事务，直接影响SELECT查询速度，因为受事务隔离性影响，利用MVCC机制需要回表根据事务ID查回滚版本**
+- **批量比单行更高效**
+- **物理删除使用truncate table**
+
+#### 本篇文章不是讲解SQL优化的操作手册，它更多的是一种指导手册，指导在创建表结构时，写SQL时应该注意什么
+
+#### 关于本篇文章会持续添加内容
+
+#### 参考链接：https://dev.mysql.com/doc/refman/8.4/en/optimization.html
