@@ -33,6 +33,7 @@
 - **批量比单行更高效**
 - **物理删除使用truncate table**
 
+
 - **要善于使用索引解决SQL问题，它是最简单、最直接、最有效的一种解决方案，当索引无法解决问题，可以从更改SQL，修改业务逻辑等方面入手，关于索引，参考链接：<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E7%B4%A2%E5%BC%95.md" target="_blank">MySQL 索引</a>**
 - **要熟练使用explain查看执行计划，参考链接：<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E6%89%A7%E8%A1%8C%E8%AE%A1%E5%88%92.md" target="_blank">MySQL 执行计划</a>**
 - **要熟练掌握优化器相关的算法来源，参考链接：<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E4%BC%98%E5%8C%96%E5%99%A8.md" target="_blank">MySQL 优化器</a>**
