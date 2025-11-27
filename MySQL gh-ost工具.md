@@ -52,3 +52,7 @@ rm -rf /tmp/ghost.postpone.flag
 #### 至此，关于gh-ost工具就介绍完了，有需要的小伙伴们可以开始用起来了！
 
 #### 参考链接：https://github.com/github/gh-ost
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
