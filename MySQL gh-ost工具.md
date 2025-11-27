@@ -31,17 +31,17 @@
 
 gh-ost变更语法，预执行，关键参数：-execute
 ```
-gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table 
+gh-ost -host=ip -port=port -user="username" -password='password' -database="database" -table="table" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table 
 ```
 
 gh-ost变更语法，执行
 ```
-gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table -execute
+gh-ost -host=ip -port=port -user="username" -password='password' -database="database" -table="table" -alter="modify COLUMN aaa varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table -execute
 ```
 
 gh-ost变更请求，控制切换时间
 ```
-gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table -execute --postpone-cut-over-flag-file=/tmp/ghost.postpone.flag
+gh-ost -host=ip -port=port -user="username" -password='password' -database="database" -table="table" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table -execute --postpone-cut-over-flag-file=/tmp/ghost.postpone.flag
 rm -rf /tmp/ghost.postpone.flag
 ```
 
