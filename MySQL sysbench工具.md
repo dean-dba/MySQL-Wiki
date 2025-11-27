@@ -40,7 +40,7 @@ sysbench的cleanup阶段
 sysbench --mysql-host=ip --mysql-port=port --mysql-user=user --mysql-password=password --mysql-db=db --db-driver=mysql --tables=10 --table-size=1000000 --threads=50 --time=120 --report-interval=10 --percentile=99 --histogram=on --rand-type=pareto --rand-pareto-h=0.1 /usr/local/share/sysbench/oltp_read_write.lua cleanup
 ```
 
-#### 安装时，新系统可能无法安装，可以选择源码编译安装，因为最新版本1.1.20的发布时间是2020年，2020年以后的新版本系统可能都存在无法直接二进制安装的问题
+#### 安装时，新系统可能无法使用二进制安装，可以选择源码编译安装，因为最新版本1.1.20的发布时间是2020年，2020年以后的新版本系统可能都存在无法直接使用二进制安装的问题
 
 #### 关于sysbench就介绍完成了，有需要的小伙伴们赶紧用起来吧！
 
