@@ -4,7 +4,7 @@
 
 #### gh-ost三种连接模式
 - **连接从库，在主库转换：这是一种默认的连接模式，在主库进行增量同步，并在从库利用binlog将增量数据异步同步至影子表**
-- **连接主库，在主库转换：它是全量+增量都在主库进行**
+- **连接主库，在主库转换：它是全量+增量都在主库进行，由参数"-allow-on-master"控制**
 - **连接从库，在从库转换：它是全量+增量都在从库进行，适用于测试+验证**
 
 #### gh-ost使用要求
@@ -29,7 +29,26 @@
 - **可以预模拟执行流程**
 - **它是原子切换，没有中间状态**
 
-gh-ost变更语法
+gh-ost变更语法，预执行，关键参数：-execute
 ```
-gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -allow-on-master -execute -ok-to-drop-table
+gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table 
 ```
+
+gh-ost变更语法，执行
+```
+gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table -execute
+```
+
+gh-ost变更请求，控制切换时间
+```
+gh-ost -host=192.168.1.23 -port=3306 -user="root" -password='mysql' -database="bbt" -table="aaa" -alter="modify COLUMN bbb varchar(800) not null" -assume-rbr -chunk-size=5000 -exact-rowcount -concurrent-rowcount -max-load=Threads_running=10 -critical-load=Threads_running=100 -max-lag-millis=2000 -cut-over=atomic -default-retries=5 -panic-flag-file=/tmp/ghost.panic.flag -initially-drop-socket-file -ok-to-drop-table -execute --postpone-cut-over-flag-file=/tmp/ghost.postpone.flag
+rm -rf /tmp/ghost.postpone.flag
+```
+
+#### gh-ost最新版本还不支持MySQL 8.4版本，因为8.4版本彻底删除了show slave status语法，由show replica status替代;
+
+#### gh-ost可以作为MySQL在线DDL的一种补充，在涉及到inplace、copy算法的变更可以使用它进行无锁迁移
+
+#### 至此，关于gh-ost工具就介绍完了，有需要的小伙伴们可以开始用起来了！
+
+#### 参考链接：https://github.com/github/gh-ost
