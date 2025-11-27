@@ -1,6 +1,6 @@
 # MySQL gh-ost工具
 
-#### gh-ost工具是github基于go语言开发的一种MySQL在线DDL变更工具，它与Percona开发的pt-online-schema-change最大不同是gh-ost不是基于触发器设计的，对于大表的DDL变更，影响几乎很小，是生产环境中必备的一个工具之一
+#### gh-ost是github基于go语言开发的一种MySQL在线DDL变更工具，它与Percona开发的pt-online-schema-change最大不同是gh-ost不是基于触发器设计的，对于大表的DDL变更，影响几乎很小，是生产环境中必备的一个工具之一
 
 #### gh-ost三种连接模式
 - **连接从库，在主库转换：这是一种默认的连接模式，在主库进行增量同步，并在从库利用binlog将增量数据异步同步至影子表**
