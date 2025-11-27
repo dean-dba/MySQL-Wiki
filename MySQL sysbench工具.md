@@ -15,12 +15,12 @@
 - **special(特殊分布)：明确的热点数据定义，应用场景：电商热门商品、社交网红内容、缓存测试**
 - **pareto(帕累托分布)：符合80/20法则，应用场景：真实业务模拟、容量规划、生产环境测试**
 
-sysbench通用语法
+sysbench通用参数语法
 ```
 sysbench --help
 ```
 
-sysbench不同场景下的语法
+sysbench不同场景下的参数语法
 ```
 sysbench /usr/local/share/sysbench/oltp_read_write.lua help
 ```
