@@ -19,17 +19,17 @@ sysbench不同场景下的语法
 sysbench /usr/local/share/sysbench/oltp_read_write.lua help
 ```
 
-sysbench prepare
+sysbench的prepare阶段
 ```
 sysbench --mysql-host=ip --mysql-port=port --mysql-user=user --mysql-password=password --mysql-db=db --db-driver=mysql --tables=10 --table-size=1000000 --threads=50 --time=120 --report-interval=10 --percentile=99 --histogram=on --rand-type=pareto --rand-pareto-h=0.1 /usr/local/share/sysbench/oltp_read_write.lua prepare
 ```
 
-sysbench run
+sysbench的run阶段
 ```
 sysbench --mysql-host=ip --mysql-port=port --mysql-user=user --mysql-password=password --mysql-db=db --db-driver=mysql --tables=10 --table-size=1000000 --threads=50 --time=120 --report-interval=10 --percentile=99 --histogram=on --rand-type=pareto --rand-pareto-h=0.1 /usr/local/share/sysbench/oltp_read_write.lua run
 ```
 
-sysbench cleanup
+sysbench的cleanup阶段
 ```
 sysbench --mysql-host=ip --mysql-port=port --mysql-user=user --mysql-password=password --mysql-db=db --db-driver=mysql --tables=10 --table-size=1000000 --threads=50 --time=120 --report-interval=10 --percentile=99 --histogram=on --rand-type=pareto --rand-pareto-h=0.1 /usr/local/share/sysbench/oltp_read_write.lua cleanup
 ```
