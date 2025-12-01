@@ -1,0 +1,21 @@
+# MySQL Percona XtraBackup
+
+#### Percona XtraBackup是一款由Percona基于C语言开发的一个开源物理热备工具，支持MySQL、Percona Server for MySQL、Percona XtraDB数据库，支持InnoDB、MyISAM、XtraDB、MyRocks存储引擎
+
+#### Percona XtraBackup版本说明：(Percona XtraBackup 8.4对应MySQL、Percona Server for MySQL、Percona XtraDB的8.4)、(Percona XtraBackup 8.0对应MySQL、Percona Server for MySQL、Percona XtraDB的8.0)、(Percona XtraBackup 2.4对应MySQL、Percona Server for MySQL、Percona XtraDB的2.4)
+
+#### Percona XtraBackup特点：
+- **非阻塞原实例：基于8.0版本LOCK INSTANCE FOR BACKUP，不阻塞DML**
+- **并行复制：可以并发复制物理文件，受参数"--parallel"控制**
+- **流式备份：可以使用流式备份至远程主机、存储，受参数"--stream"控制，流式格式：xbstream**
+- **压缩：支持压缩，减少磁盘空间，受参数"--compress"控制，压缩格式：zstd(默认)、lz4**
+- **加密：支持加密，可以保障数据的安全性，受参数"--encrypt"控制**
+- **限流，支持限流，避免对源实例IO造成影响，受参数"--throttle"控制**
+
+#### Percona XtraBackup备份功能：全量备份、增量备份、库级备份、表级备份、分区备份
+#### Percona XtraBackup恢复功能：全量恢复、部分恢复、库级恢复、表级恢复、分区恢复
+
+全量备份
+```
+xtrabackup --host=192.168.1.22 --port=3306 --user=root --password=mysql --estimate-memory=ON --compress --compress-threads=4 --stream=xbstream --dump-innodb-buffer-pool --backup 2> backupout.log|ssh root@192.168.1.24 "cat > /opt/backup/backup_full.xbstream"
+```
