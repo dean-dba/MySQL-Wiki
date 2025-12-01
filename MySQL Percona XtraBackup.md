@@ -17,5 +17,22 @@
 
 全量备份
 ```
-xtrabackup --host=192.168.1.22 --port=3306 --user=root --password=mysql --estimate-memory=ON --compress --compress-threads=4 --stream=xbstream --dump-innodb-buffer-pool --backup 2> backupout.log|ssh root@192.168.1.24 "cat > /opt/backup/backup_full.xbstream"
+xtrabackup --host=ip --port=3306 --user=user --password=password --estimate-memory=ON --compress --compress-threads=4 --stream=xbstream --dump-innodb-buffer-pool --backup 2> backupout.log|ssh user@ip "cat > /opt/backup/backup_full.xbstream"
+```
+
+全量恢复
+```
+xbstream -x --decompress --decompress-threads=4 -C /opt/aaa < backup_full.xbstream
+xtrabackup --prepare --parallel=4 --use-free-memory-pct=50 --target-dir=/opt/aaa/
+xtrabackup --copy-back --target-dir=/opt/aaa/
+```
+
+恢复单张表
+```
+xbstream -x --decompress --decompress-threads=4 -C /opt/aaa < backup_full.xbstream
+xtrabackup --prepare --parallel=4 --use-free-memory-pct=50 --target-dir=/opt/aaa/
+create table aaa (   id int(11) unsigned not null auto_increment,    accountid mediumint(8) not null default '0' ,   addtime int(11) unsigned not null,   primary key (`id`) )  comment='操作记录';
+alter table aaa discard tablespace;
+复制表文件*.idb
+alter table aaa import tablespace;
 ```
