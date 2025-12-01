@@ -20,6 +20,7 @@
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8BSQL%E4%BC%98%E5%8C%96.md" target="_blank">MySQL 性能优化之SQL优化</a>**
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20gh-ost%E5%B7%A5%E5%85%B7.md" target="_blank">MySQL gh-ost工具</a>**
 - **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20sysbench%E5%B7%A5%E5%85%B7.md" target="_blank">MySQL sysbench工具</a>**
+- **<a href="https://github.com/dean-dba/MySQL-Wiki/blob/main/MySQL%20Percona%20XtraBackup.md" target="_blank">MySQL Percona XtraBackup</a>**
   
 &nbsp;
 
