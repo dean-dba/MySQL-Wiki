@@ -1,4 +1,4 @@
-# MySQL Percona XtraBackup
+# MySQL Percona XtraBackup工具
 
 #### Percona XtraBackup是一款由Percona基于C语言开发的一个开源物理热备工具，支持MySQL、Percona Server for MySQL、Percona XtraDB数据库，支持InnoDB、MyISAM、XtraDB、MyRocks存储引擎
 
