@@ -36,3 +36,12 @@ alter table aaa discard tablespace;
 复制表文件*.idb
 alter table aaa import tablespace;
 ```
+
+#### 至此关于Percona XtraBackup备份恢复就介绍完成了，有需要的小伙伴可以赶紧用起来了！
+
+#### 参数链接：https://docs.percona.com/percona-xtrabackup/8.4/index.html
+
+&nbsp;
+
+**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
+
