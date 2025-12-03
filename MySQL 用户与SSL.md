@@ -21,7 +21,7 @@ grant backup_admin on *.* to 'test'@'%';                              --运维�
 grant all on *.* to 'test'@'%';                                       --全局级别，表:user
 grant all on db.* to 'test'@'%';                                      --库级别，表:db
 grant all on db.table to 'test'@'%';                                  --表级别，表:tables_priv
-grant select(host) on db.table to 'test'@'%';                         --列级别，表:columns_priv
+grant select(column) on db.table to 'test'@'%';                         --列级别，表:columns_priv
 grant execute on procedure test.procedure to 'test'@'%';              --存储过程、函数级别，表:procs_priv
 grant execute on function test.function to 'test'@'%';                --函数级别，表:procs_priv
 ```
