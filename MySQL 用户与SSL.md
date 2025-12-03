@@ -15,6 +15,17 @@
 - **增加了生成随机密码功能，默认：20位**
 - **增加了用户密码登陆失败跟踪，比如：错误密码的登陆次数，以及锁定时间**  
 
+权限分层结构
+```
+grant backup_admin on *.* to 'test'@'%';                              --运维级别，表:global_grants
+grant all on *.* to 'test'@'%';                                       --全局级别，表:user
+grant all on db.* to 'test'@'%';                                      --库级别，表:db
+grant all on db.table to 'test'@'%';                                  --表级别，表:tables_priv
+grant select(host) on db.table to 'test'@'%';                         --列级别，表:columns_priv
+grant execute on procedure test.procedure to 'test'@'%';              --存储过程、函数级别，表:procs_priv
+grant execute on function test.function to 'test'@'%';                --函数级别，表:procs_priv
+```
+
 创建用户，并授权
 ```
 CREATE USER 'jeffrey'@'localhost' IDENTIFIED BY 'password';
