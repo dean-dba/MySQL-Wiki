@@ -88,10 +88,10 @@ caching_sha2_password插件密码组成
 ```
 plugin: caching_sha2_password
 authentication_string: $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED
-$A：sha-256    hash算法
-$005：5000次   hash轮转次数
-$THISISACOMBINATIONOF：加盐值
-INVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED：hash值
+$A：sha-256    hash算法，占用2B
+$005：5000次   hash轮转次数，占用4B
+$THISISACOMBINATIONOF：加盐值，占用21B
+INVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED：hash值，占用43B
 ```
 
 caching_sha2_password插件参数
