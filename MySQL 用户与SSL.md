@@ -73,6 +73,29 @@ mysql> SHOW VARIABLES LIKE 'validate_password%';
 8 rows in set (0.01 sec)
 ```
 
+caching_sha2_password插件密码组成
+```
+plugin: caching_sha2_password
+authentication_string: $A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED
+$A：sha-256    hash算法
+$005：5000次   hash轮转次数
+$THISISACOMBINATIONOF：加盐值
+INVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED：hash值
+```
+
+caching_sha2_password插件参数
+```
+mysql> show variables like '%caching_sha2_password%';
++----------------------------------------------+-----------------+
+| Variable_name                                | Value           |
++----------------------------------------------+-----------------+
+| caching_sha2_password_auto_generate_rsa_keys | ON              |
+| caching_sha2_password_digest_rounds          | 5000            |
+| caching_sha2_password_private_key_path       | private_key.pem |
+| caching_sha2_password_public_key_path        | public_key.pem  |
++----------------------------------------------+-----------------+
+```
+
 - **caching_sha2_password插件即使非SSL连接环境下，仍然可以用RSA 密钥对，进行客户端与服务端的密码交换，防止密码泄露**
 - **caching_sha2_password插件使用SHA256(SHA256())算法，即使相同的密码，也会得到不同的hash值，使得预先计算的彩虹表攻击失效，每个密码都需要单独破解，且支持缓存，支持更多并发，尤其是连接池**
 - **MySQL 8.0版本开始服务端默认开启SSL，客户端为了兼容性，不强制开启，若客户端强制开启，受参数“require_secure_transport”控制**
