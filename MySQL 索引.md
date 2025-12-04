@@ -107,6 +107,22 @@ alter table test drop index idx_a;
 - **一个复合索引只能包含一个多值索引列**
 - **JSON类型的cast函数的默认排序规则为utf8mb4_0900_ai_ci，JSON_UNQUOTE()函数的默认排序规则为utf8mb4_bin**
 
+#### 聚集索引表索引高度与行数计算公式
+```
+3层高约等于79483712行
+
+16K根节点=(bigint 8字节+子页指针 6字节+额外2字节)+(页头 120字节+页尾 8字节)
+
+根节点数量=(16384-128)/16=1016行
+
+16K页子节点=AVG_ROW_LENGTH 211字节
+
+页子节点数量=(16384-128)/211=77行
+
+表结构：
+CREATE TABLE sbtest1 (id bigint NOT NULL AUTO_INCREMENT,k int NOT NULL DEFAULT '0',c char(120) NOT NULL DEFAULT '',pad char(60) NOT NULL DEFAULT '',PRIMARY KEY (id),KEY k_1 (`k`)) ENGINE=InnoDB AUTO_INCREMENT=1000003 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+```
+
 #### 至此，关于MySQL 索引就基本介绍完了，有需要的小伙伴们，赶紧跟着示例使用起来吧！
 
 #### 参考链接：https://dev.mysql.com/doc/refman/8.4/en/create-index.html
