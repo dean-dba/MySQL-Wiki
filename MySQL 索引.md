@@ -121,6 +121,9 @@ alter table test drop index idx_a;
 
 表结构：
 CREATE TABLE sbtest1 (id bigint NOT NULL AUTO_INCREMENT,k int NOT NULL DEFAULT '0',c char(120) NOT NULL DEFAULT '',pad char(60) NOT NULL DEFAULT '',PRIMARY KEY (id),KEY k_1 (`k`)) ENGINE=InnoDB AUTO_INCREMENT=1000003 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+表大小：
+select * from information_schema.tables where table_name='sbtest1';
 ```
 
 #### 至此，关于MySQL 索引就基本介绍完了，有需要的小伙伴们，赶紧跟着示例使用起来吧！
