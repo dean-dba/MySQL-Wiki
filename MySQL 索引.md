@@ -106,6 +106,7 @@ alter table test drop index idx_a;
 - **多列索引遵循最左前缀原则，但在特殊场景下，也可以使用"skip_scan"特性**
 - **一个复合索引只能包含一个多值索引列**
 - **JSON类型的cast函数的默认排序规则为utf8mb4_0900_ai_ci，JSON_UNQUOTE()函数的默认排序规则为utf8mb4_bin**
+- **前缀索引无法使用覆盖索引**
 
 #### 聚集索引表索引高度与行数计算公式
 ```
