@@ -43,5 +43,5 @@ alter table aaa import tablespace;
 
 &nbsp;
 
-**有兴趣的小伙伴，可加联系方式：Vx：+86 183 1026 3857&nbsp;&nbsp;&nbsp;&nbsp;Telegram：+86 189 1127 2119**  
+**有兴趣的小伙伴，可加联系方式：Telegram：@dean_code**  
 
